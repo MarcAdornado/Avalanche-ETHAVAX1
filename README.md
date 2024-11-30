@@ -8,12 +8,16 @@ Ensure you have a compatible Ethereum development environment set up. Copy the p
 
 **How to Run:**
 
-**Ensure you have a compatible Ethereum development environment set up. You can use Remix IDE (https://remix.ethereum.org) for easy testing and deployment.
+Ensure you have a compatible Ethereum development environment set up. You can use Remix IDE (https://remix.ethereum.org) for easy testing and deployment.
 
 Copy the provided Solidity code into the Remix IDE editor.
+
 Compile the contract to ensure it is error-free.
+
 Deploy the contract on the Remix Ethereum environment or any supported Ethereum network.
+
 Interact with the contract through the Remix interface by calling the checkMultiple function.
+
 
 **Author**
 
