@@ -1,4 +1,5 @@
 Description
+
 The NumberValidator smart contract validates whether a given number is a positive multiple of 5. It uses the require statement to ensure that the input is a positive number, and the revert function to reject numbers that are not multiples of 5. Additionally, the contract employs an assert statement to verify that the number is indeed divisible by 5 after the check.
 
 Executing program
