@@ -2,19 +2,42 @@
 
 
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.27;
+pragma solidity ^0.8.13;
 
-contract NumberValidator {
+contract storeInventory {
+
+    uint public totalApples = 10; 
+    uint public totalBanana = 10; 
+
     
-    function checkMultiple(int num) public pure returns (string memory) {
-        require( num > 0, "Input must be positive number");
-        
-        if (num % 5 != 0) {
-            revert("The number is not a multiple of 5");
+    function buyApples(uint apples) public {
+        require(apples > 0 && apples <= 10, "You may only buy between 1 and 10 apples.");
+
+        if(totalApples < apples){
+        revert("Not enough apples in stock.");
+        }
+
+        totalApples -= apples; 
+    }
+
+    function buyBanana(uint banana) public {
+        require(banana > 0 && banana <= 10, "You may only buy between 1 and 10 apples.");
+
+        if(totalBanana < banana){
+        revert("Not enough banana in stock.");
         }
         
-        assert( num % 5 == 0);
-        
-        return "The number is a multiple of 5";
+        totalBanana -= banana; 
     }
+
+    function restockApples(uint apples) public {
+        totalApples += apples;
+        assert(totalApples >= 0);
+    }
+
+    function restockBanana(uint banana) public {
+        totalBanana += banana;
+        assert(totalBanana >= 0);
+    }
+
 }
