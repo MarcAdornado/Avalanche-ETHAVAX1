@@ -1,6 +1,6 @@
 **Description**
 
-The NumberValidator smart contract validates whether a given number is a positive multiple of 5. It uses the require statement to ensure that the input is a positive number, and the revert function to reject numbers that are not multiples of 5. Additionally, the contract employs an assert statement to verify that the number is indeed divisible by 5 after the check.
+The storeInventory smart contract is designed to manage the inventory of apples and bananas in a store. It allows users to buy apples and bananas within specified limits between 1 and 10 while ensuring there is sufficient stock. If the user attempts to buy more than the available stock, the contract reverts the transaction. Additionally, the contract enables store managers or users to restock apples and bananas to ensure inventory levels remain adequate. The contract employs basic Solidity features like require, revert, and assert for input validation and ensuring the integrity of inventory data.
 
 **Executing program**
 
